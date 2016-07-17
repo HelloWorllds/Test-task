@@ -1,0 +1,715 @@
+@import "bourbon/bourbon"
+
+$text-color: #333
+
+body
+	font-family: Myriad Pro, sans-serif
+	color: $text-color
+	font-weight: normal
+	font-size: 15px
+	min-width: 320px
+	position: relative
+	background: white
+	line-height: 1.6
+	-webkit-font-smoothing: antialised
+	overflow-x: hidden
+
+// Start MICROSOFT Nav
+
+nav
+	width: 85%
+	height: 50px
+	margin: auto
+	position: relative
+	.wide-screen
+		display: block
+	.logo
+		display: inline-block
+		width: 110px
+		margin-right: 20px
+		img
+			width: 98%
+	.main-menu
+		display: inline-block
+		padding: 0
+		margin: 0
+		height: 100%
+		list-style: none		
+		.sub-menu
+			position: absolute
+			z-index: 9999
+			display: none
+			width: 250px
+			margin: 0
+			padding: 0
+			list-style: none
+			background: #f2f2f2
+			a
+				margin-bottom: -1px
+				width: 250px
+			li
+				&:hover
+					background-color: #e5e5e5
+					.sub-sub-menu
+						display: block
+		.sub-sub-menu
+			position: absolute
+			z-index: 9999
+			display: none
+			width: 250px
+			top: 0
+			left: 248px
+			margin: 0
+			padding: 0
+			list-style: none
+			background: #e5e5e5
+			a
+				margin-bottom: -1px
+				width: 250px
+				&:hover
+					background-color: #dddcdc
+		a
+			display: block
+			margin-left: -1px
+			padding: 12px 35px
+			height: 50px
+			width: 125px
+			color: $text-color
+			&:hover, &:active, &:visited, &:link, &:focus
+				text-decoration: none					
+	.main-menu > li
+		display: inline-block
+		position: relative
+		margin-right: -4px
+		span
+			display: block
+			position: absolute
+			top: 40%			
+			opacity: 0.7
+			width: 5px
+			height: 5px
+			border: 1px solid transparent
+			border-left: 1px solid black
+			border-bottom: 1px solid black
+			transform: rotate(-45deg)
+		.str
+			right: 35%
+		.prod
+			right: 15%
+		&:last-child
+			margin-right: 0		
+	.main-menu > li
+		i
+			display: block
+			position: absolute
+			top: 70px
+			right: 30px		
+			opacity: 0.5
+			width: 5px
+			height: 5px
+			border: 1px solid transparent
+			border-left: 1px solid black
+			border-bottom: 1px solid black
+			transform: rotate(-135deg)
+		$i: 2 
+		$j: 0
+		$top: 70px
+		$increment: 49px
+		@while $i <= 12
+			@if $i <= 7
+				.corner-#{$i}				 
+					top: $top + $increment * $i - $increment
+				$j: -1
+			@else if $i >= 8				
+				.corner-#{$i}
+					top: 20px + $increment * $j
+			$i: $i + 1
+			$j: $j + 1
+	.main-menu > li > a
+		&:hover
+			background-color: #f2f2f2
+	.right
+		display: inline-block
+		height: 100%
+		position: absolute
+		top: 0
+		right: 0
+		.search-container
+			display: inline-block
+			height: 100%
+			margin-right: 15px
+			.search
+				display: table		
+				border: 1px solid #777
+				width: 270px
+				height: 30px
+				margin-top: 8px
+				input
+					display: table-cell
+					height: 30px
+					width: 230px
+					border: 0
+					text-indent: 10px
+					&:hover, &:focus
+						outline: none
+				.loupe
+					display: table-cell
+					width: 30px
+					height: 30px
+					background-image: url(../img/loupe.svg)
+					background-size: 70%
+					background-repeat: no-repeat
+					background-position: center center
+					opacity: 0.5
+		.basket
+			display: inline-block
+			width: 50px
+			height: 100%
+			margin: 0
+			padding: 10px 10px
+			line-height: 25px
+			vertical-align: top
+			opacity: 0.9
+			img
+				display: inline-block
+				width: 50%
+				opacity: 0.7			
+			.counter
+				display: inline-block
+				font-size: 12px
+			&:hover
+				cursor: pointer
+				background-color: #f2f2f2			
+		.login
+			display: inline-block
+			height: 100%
+			font-size: 12px
+			line-height: 25px
+			vertical-align: top
+			padding: 11px 10px
+			opacity: 0.8
+			&:hover
+				cursor: pointer
+				background-color: #f2f2f2
+				color: #05a6f0
+				opacity: 1
+	.small-screen
+		display: none
+		.logo
+			display: inline-block
+			width: 110px
+			margin-top: 8px
+			margin-right: 20px
+			img
+				width: 98%
+		.search-container
+			display: inline-block
+			height: 100%
+			width: 50px
+			padding: 8px
+			margin-right: -5px
+			.loupe
+				width: 30px
+				height: 30px
+				background-image: url(../img/loupe.svg)
+				background-size: 70%
+				background-repeat: no-repeat
+				background-position: center center
+				opacity: 0.5
+			&:hover
+				cursor: pointer
+				background-color: #f2f2f2
+		.menu
+			display: inline-block
+			width: 50px
+			height: 100%
+			line-height: 25px
+			vertical-align: top
+			.menu-button
+				position: relative
+				padding-left: 10px
+				padding-right: 10px
+				margin-top: 15px
+				background-color: transparent
+				border: 0
+				width: 30px
+				height: 30px
+				&:before
+					content: ""
+					position: absolute
+					left: 13px
+					top: 2px
+					width: 20px
+					height: 2px
+					background: #ababab
+					box-shadow: 0 5px 0 0 #ababab, 0 10px 0 0 #ababab
+			.small-main-menu
+				display: none
+				position: absolute
+				z-index: 9999
+				top: 50px
+				right: 0
+				padding: 0
+				margin: 0
+				height: 100%
+				list-style: none
+				background: #f2f2f2		
+				.small-sub-menu
+					display: none
+					width: 300px
+					margin: 0
+					padding: 0
+					list-style: none
+					background: #f2f2f2 * 0.94
+					a
+						margin-bottom: -1px
+						width: 300px
+					li
+						&:hover
+							background-color: #f2f2f2 * 0.91
+						&:last-child
+							border-bottom: 0.5px solid #999
+				.small-sub-sub-menu
+					display: none
+					width: 300px
+					top: 0
+					right: 300px
+					margin: 0
+					padding: 0
+					list-style: none
+					background: #f2f2f2 * 0.90
+					a
+						margin-bottom: -1px
+						width: 300px
+						&:hover
+							background-color: #f2f2f2 * 0.87
+				a
+					display: block
+					margin-left: -1px
+					padding: 12px 35px
+					height: 50px
+					width: 300px
+					color: $text-color
+					&:hover, &:active, &:visited, &:link, &:focus
+						text-decoration: none					
+			.small-main-menu > li
+				display: inline-block
+				margin-right: -4px
+				background: #f2f2f2
+				&:last-child
+					margin-right: 0
+			.small-main-menu > li > a
+				&:hover
+					background-color: #f2f2f2 * 0.96			
+			&:hover
+				cursor: pointer
+				background-color: #f2f2f2
+
+
+.search-wrapper
+	display: none
+	width: 100%
+	height: 80px
+	background-color: #f2f2f2
+	text-align: center
+	padding: 25px
+	.input-wrapper
+		display: table
+		width: 70%
+		margin: auto
+		input
+			display: table-cell
+			height: 30px
+			width: 100%
+			border: 0
+			text-indent: 10px
+			&:hover, &:focus
+				outline: none
+		.loupe
+			display: table-cell
+			width: 30px
+			height: 30px
+			background-color: #0078d7
+			background-image: url(../img/loupe-white.svg)
+			background-size: 70%
+			background-repeat: no-repeat
+			background-position: center center
+			&:hover
+				cursor: pointer
+.opened
+	background: #f2f2f2
+.hover
+	background-color: #e5e5e5
+
+//End MICROSOFT Nav
+
+//Start Dropbox hero
+
+.hero
+	min-height: 640px
+	background-color: #f7f7f7
+	background-image: url(../img/hero-bg.jpg)
+	background-position: 108% 6%
+	background-size: 54%
+	background-repeat: no-repeat
+	.info
+		margin: 150px 0 100px 50px
+		width: 450px
+		font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif
+		line-height: 1.3
+		text-align: left
+		h1
+			color: #47525d			
+			font-size: 50px			
+			margin-bottom: 20px
+			font-weight: 300
+			letter-spacing: 1px
+		h2
+			color: #47525d
+			font-size: 23px
+			margin-bottom: 50px
+			font-weight: 300			
+			opacity: 0.9
+		.button-wrapper
+			display: block
+			button
+				width: 250px
+				height: 60px
+				color: white
+				background-color: #0071e0
+				padding: 10px
+				font-size: 23px
+				font-weight: 400
+				border-radius: 8px
+				border: 0
+				margin-bottom: 20px
+				&:hover, &:focus, &:active
+					outline: none
+				&:hover
+					outline: none
+					opacity: 0.7
+			.link
+				display: block
+				font-size: 18px
+				a
+					color: #0071e0
+					text-decoration: underline
+					&:hover
+						opacity: 0.7
+
+//End Dropbox hero
+
+//Start Invision signup
+
+.signup
+	background-color: #323a45
+	color: white
+	padding-top: 50px
+	padding-bottom: 80px
+	text-align: center
+	margin: 0 auto
+	h3
+		font-size: 30px			
+		margin-bottom: 55px
+		font-weight: 300
+		letter-spacing: 1px
+		font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif
+		line-height: 1.3
+		span
+			font-weight: bold
+	form
+		display: block
+		margin-bottom: 55px
+		div
+			display: inline-block
+			width: 275px
+			height: 60px
+			background-color: white
+			border: 0
+			border-radius: 5px
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+			input
+				width: 220px
+				height: 40px
+				float: right
+				border: 0
+				text-indent: 10px
+				color: #949ea6
+				font-size: 19px
+				font-weight: 100
+				&:hover, &:focus, &:active
+					outline: none
+		.name
+			padding: 10px
+			background-image: url(../img/sprites.png)
+			background-position: 10px -130px
+			background-size: 15%
+			background-repeat: no-repeat
+		.email
+			padding: 10px
+			background-image: url(../img/sprites.png)
+			background-position: 10px -15px
+			background-size: 15%
+			background-repeat: no-repeat
+				
+		.pass
+			padding: 10px
+			background-image: url(../img/sprites.png)
+			background-position: 10px -70px
+			background-size: 15%
+			background-repeat: no-repeat
+				
+		.button-wrapper
+			overflow: hidden
+			input
+				width: 275px
+				height: 60px
+				border: 0
+				background-color: #ff3366
+				color: white
+				text-indent: 0
+				text-transform: uppercase
+				font-weight: bold
+				font-size: 14px
+				letter-spacing: 0.5px
+	p
+		font-size: 13px
+		color: #606870
+		letter-spacing: 0.3px
+		a
+			color: #606870
+			text-decoration: underline
+			&:hover
+				color: white
+
+//End Invision signup
+
+//Start Oculus specials offers
+
+.special-offers
+	width: 100%
+	height: 300px
+	color: white
+	text-align: center
+	display: table
+	overflow: hidden
+	cursor: pointer
+	.item
+		display: table-cell
+		position: relative
+		width: 33.32%
+		height: 100%
+		overflow: hidden		
+		&:first-child
+			.item-image
+				width: 100%
+				height: 100%
+				position: absolute
+				z-index: 9
+				background-image: url(../img/eve-valkyrie.jpg)
+				background-position: center center
+				background-size: cover
+				background-repeat: no-repeat
+				margin-right: -3px
+				transition: all 0.5s ease
+		&:nth-child(2)
+			.item-image
+				width: 100%
+				height: 100%
+				position: absolute
+				z-index: 9
+				background-image: url(../img/luckys-tale.jpg)
+				background-position: center center
+				background-size: cover
+				background-repeat: no-repeat
+				margin-right: -4px
+				transition: all 0.5s ease
+		&:last-child
+			.item-image
+				width: 100%
+				height: 100%
+				position: absolute
+				z-index: 9
+				background-image: url(../img/touch.jpg)
+				background-position: center center
+				background-size: cover
+				background-repeat: no-repeat
+				transition: all 0.5s ease				
+		.content
+			position: absolute
+			width: 100%
+			height: 100%
+			z-index: 9999
+			padding: 100px 0
+			background-color: rgba(0, 0, 0, 0.5)
+			p
+				color: #a4a5a6
+				font-size: 20px
+				font-weight: 300
+				letter-spacing: 1px
+				padding: 10px
+				margin: 0
+			h5
+				font-size: 25px
+				font-weight: 300
+				letter-spacing: 0.3px
+				padding: 0 10px
+				margin: 0
+				text-transform: capitalize
+		&:hover
+			.item-image
+				transform: scale(1.1)
+			.content
+				background-color: rgba(0, 0, 0, 0.2)
+
+//End Oculus specials offers
+
+//Start Apple footer
+
+footer
+	display: block
+	padding-top: 30px
+	padding-bottom: 30px
+	background-color: #f2f2f2
+	font-size: 11px
+	font-weight: 400
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif
+	color: #666
+	ul
+		list-style: none
+	.footer-nav
+		display: block
+		margin-left: 7%
+		margin-right: 7%
+		.column
+			display: inline-block
+			vertical-align: top
+			text-align: left
+			margin-right: 90px
+			margin-bottom: 30px
+			&:last-child
+				margin-right: 0
+			ul
+				font-weight: 700
+				color: #666 * 0.8
+				padding: 0
+				li
+					margin-bottom: 5px
+				a
+					color: #666
+					font-weight: 400
+					opacity: 0.8					
+	p
+		display: inline-block
+		color: #666 * 1.6
+		text-align: left
+		margin-left: 7%
+		margin-right: 7%
+	.hr
+		width: 86%
+		height: 1px
+		margin-left: 7%
+		margin-right: 7%
+		background-color: #f2f2f2 * 0.9
+	.panel
+		display: block
+		p
+			display: inline-block
+			margin-right: 10px
+		ul
+			display: inline-block
+			color: #666666
+			li
+				display: inline-block
+				a
+					color: #666666
+					margin: 10px
+		.language
+			display: inline-block
+			float: right
+			margin-top: 10px
+			margin-right: 80px
+			.flag
+				display: inline-block
+				width: 16px
+				height: 16px
+				background-image: url(../img/usa.png)
+				background-repeat: no-repeat
+				background-size: 100%
+				margin-right: 5px
+			a
+				display: inline-block
+				line-height: 20px
+				vertical-align: top
+				color: #666666
+
+.small-screen-footer
+	display: none
+	.footer-ac-nav
+		width: 100%
+		margin: 30px 0
+		div
+			border-bottom: 1px solid #f2f2f2 * 0.9
+		label
+			display: block
+			position: relative
+			z-index: 9999
+			padding: 5px
+			line-height: 30px
+			font-size: 13px
+			cursor: pointer
+			&:hover
+				background-color: #f2f2f2 * 0.95
+			&:after
+				content: '+'
+				position: absolute
+				width: 24px
+				height: 24px
+				right: 1px
+				top: 5px
+		ul
+			margin-top: -1px
+			margin-bottom: 0
+			overflow: hidden
+			height: 0
+			position: relative
+			z-index: 100
+			trasition: height 2s ease-in-out
+			font-weight: 700
+			color: #666 * 0.8
+			padding: 0
+			li
+				margin-bottom: 5px
+				margin-left: 10px
+			a
+				color: #666
+				font-weight: 400
+				opacity: 0.8
+		input
+			display: none
+		input:checked ~ ul
+			trasition: height 4s ease-in-out
+		input:checked ~ ul.ac-opened
+			height: auto
+	p
+		font-size: 12px
+		letter-spacing: 0.25px
+	.hr
+		display: none
+	.panel
+		position: relative
+		p
+			font-size: 11px
+			letter-spacing: 0px
+			margin-top: 30px
+		ul
+			margin-left: -30px
+		.language
+			position: absolute
+			z-index: 100
+			top: -10px
+			left: 25px
+
+//End Apple footer

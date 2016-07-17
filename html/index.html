@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Ciklum JavaScript Internship</title>
+  <meta charset="UTF-8" />
+  <meta name="Pinguin" author="Pinguin"/>
+  <meta name="description" content="" />
+  <link rel="shortcut icon" href="favicon.png" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.2.min.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/media.css"/>
+
+</head>
+<body>
+
+  <!-- Start MICROSOFT Nav -->
+
+  <nav>
+
+    <div class="wide-screen">
+      <div class="logo">
+        <img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1606-01000/shell/v3/images/logo/microsoft.png" alt="Microsoft">
+      </div>
+      <ul class="main-menu">
+          <li class="store">
+            <a href="#store">Store&nbsp;<span class="str"></span></a>
+            <ul class="sub-menu">
+                <li><a href="#store-home">Store Home</a></li>
+                <li class="devices">
+                  <a href="#devices">Devices</a><i class="corner-1"></i>
+                  <ul class="sub-sub-menu">
+                      <li><a href="#1">Microsoft Surface</a></li>
+                      <li><a href="#2">PCs &amp; tablets</a></li>
+                      <li><a href="#3">Xbox</a></li>
+                      <li><a href="#4">Virtual reality</a></li>
+                      <li><a href="#5">Accessories</a></li>
+                      <li><a href="#6">Windows phone</a></li>
+                      <li><a href="#7">Microsoft Band</a></li>
+                  </ul>
+                </li>
+                <li class="software">
+                  <a href="#software">Software</a><i class="corner-2"></i>
+                  <ul class="sub-sub-menu">
+                      <li><a href="#1">Office</a></li>
+                      <li><a href="#2">Windows</a></li>
+                      <li><a href="#3">Additional software</a></li>
+                  </ul>
+                </li>
+                <li class="apps">
+                  <a href="#apps">Apps</a><i class="corner-3"></i>
+                  <ul class="sub-sub-menu">
+                      <li><a href="#1">All apps</a></li>
+                      <li><a href="#2">Windows apps</a></li>
+                      <li><a href="#3">Windows phone apps</a></li>                      
+                  </ul>
+                </li>
+                <li class="games">
+                  <a href="#games">Games</a><i class="corner-4"></i>
+                  <ul class="sub-sub-menu">
+                      <li><a href="#1">Xbox One games</a></li>
+                      <li><a href="#2">Xbox 360 games</a></li>
+                      <li><a href="#3">PC games</a></li>
+                      <li><a href="#4">Windows games</a></li>
+                      <li><a href="#5">Windows phone games</a></li>
+                  </ul>
+                </li>
+                <li class="entertainment">
+                  <a href="#entertainment">Entertainment</a><i class="corner-5"></i>
+                  <ul class="sub-sub-menu">
+                      <li><a href="#1">All Entertainment</a></li>
+                      <li><a href="#2">Movies &amp; TV</a></li>
+                      <li><a href="#3">Music</a></li>
+                  </ul>
+                </li>
+                <li class="business">
+                  <a href="#business">Business &amp; Education</a><i class="corner-6"></i>
+                  <ul class="sub-sub-menu">
+                      <li><a href="#1">Bussinese Store</a></li>
+                      <li><a href="#2">Education Store</a></li>
+                      <li><a href="#3">Developer</a></li>
+                  </ul>
+                </li>
+                <li class="sale">
+                  <a href="#sale">Sale</a><i class="corner-7"></i>
+                  <ul class="sub-sub-menu">
+                      <li><a href="#1">Back-to-school essentials</a></li>
+                      <li><a href="#2">Sale</a></li>
+                  </ul>
+                </li>
+                <li><a href="#find">Find a store</a></li>
+                <li><a href="#gift">Gift cards</a></li>
+            </ul>
+          </li>
+          <li class="products">
+              <a href="#products">Products&nbsp;<span class="prod"></span></a>
+              <ul class="sub-menu">
+                  <li class="services">
+                    <a href="#services">Software &amp; services</a><i class="corner-8"></i>
+                    <ul class="sub-sub-menu">
+                        <li><a href="#1">Windows</a></li>
+                        <li><a href="#2">Office</a></li>
+                        <li><a href="#3">Free downloads &amp; security</a></li>
+                        <li><a href="#4">Internet Explorer</a></li>
+                        <li><a href="#5">Microsoft Edge</a></li>
+                        <li><a href="#6">Skype</a></li>
+                        <li><a href="#7">OneNote</a></li>
+                        <li><a href="#8">OneDrive</a></li>
+                        <li><a href="#9">Microft Health</a></li>
+                        <li><a href="#10">MSN</a></li>
+                        <li><a href="#11">Bing</a></li>
+                        <li><a href="#12">Microft Groove</a></li>
+                        <li><a href="#13">Microsoft Films &amp; TV</a></li>
+                    </ul>
+                  </li>
+                  <li class="xbox">
+                    <a href="#xbox">Devices &amp; Xbox</a><i class="corner-9"></i>
+                    <ul class="sub-sub-menu">
+                        <li><a href="#1">All Microsoft devices</a></li>
+                        <li><a href="#2">Microsoft Surface</a></li>
+                        <li><a href="#3">All Windows PCs &amp; tablets</a></li>
+                        <li><a href="#4">PC Accessories</a></li>
+                        <li><a href="#5">Xbox &amp; games</a></li>
+                        <li><a href="#6">Microsoft Band</a></li>
+                        <li><a href="#7">Micrsoft Lumia</a></li>
+                    </ul>
+                  </li>
+                  <li class="for-business">
+                    <a href="#for-business">For business</a><i class="corner-10"></i>
+                    <ul class="sub-sub-menu">
+                        <li><a href="#1">Cloud platform</a></li>
+                        <li><a href="#2">Microsoft Azure</a></li>
+                        <li><a href="#3">Microsoft Dynamics</a></li>
+                        <li><a href="#4">Windows for business</a></li>
+                        <li><a href="#5">Office for business</a></li>
+                        <li><a href="#6">Skype for business</a></li>
+                        <li><a href="#7">Surface for business</a></li>
+                        <li><a href="#8">Enterprise solutions</a></li>
+                        <li><a href="#9">Small business solutions</a></li>
+                        <li><a href="#10">Find a solutions provider</a></li>
+                        <li><a href="#11">Volume Licensing</a></li>
+                    </ul>
+                  </li>
+                  <li class="for-developers">
+                    <a href="#for-developers">For developers &amp; IT pros</a><i class="corner-11"></i>
+                    <ul class="sub-sub-menu">
+                        <li><a href="#1">Develop Windows apps</a></li>
+                        <li><a href="#2">Microsoft Azure</a></li>
+                        <li><a href="#3">MSDN</a></li>
+                        <li><a href="#4">Technet</a></li>
+                        <li><a href="#5">Visual Studio</a></li>
+                    </ul>
+                  </li>
+                  <li class="for-students">
+                    <a href="#for-students">For students &amp; educators</a><i class="corner-12"></i>
+                    <ul class="sub-sub-menu">
+                        <li><a href="#1">Shop PCs &amp; tablets perfect for students</a></li>
+                        <li><a href="#2">Microft in Education</a></li>
+                    </ul>
+                  </li>
+              </ul>
+          </li>
+          <li><a href="#support">Support</a></li>
+      </ul>
+      <div class="right">
+        <div  class="search-container">
+          <div class="search">
+            <input type="text" placeholder="Search Microsoft.com">
+            <div class="loupe"></div>
+          </div>
+        </div>
+        <div class="basket">
+          <img src="img/basket.svg">
+          <div class="counter">0</div>
+        </div>
+        <div class="login">Sign in</div>
+      </div>
+    </div>
+
+    <div class="small-screen">
+      <div class="logo">
+        <img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1606-01000/shell/v3/images/logo/microsoft.png" alt="Microsoft">
+      </div>      
+      <div class="right">
+        <div  class="search-container">
+          <div class="loupe"></div>
+        </div>
+        <div class="basket">
+          <img src="img/basket.svg">
+          <div class="counter">0</div>
+        </div>
+        <div class="menu">
+          <div class="menu-button"></div>
+          <ul class="small-main-menu">
+              <li class="store">
+                <a href="#store">Store&nbsp;<span class="str"></span></a>
+                <ul class="small-sub-menu">
+                    <li><a href="#store-home">Store Home</a></li>
+                    <li class="devices">
+                      <a href="#devices">Devices</a><i class="corner-1"></i>
+                      <ul class="small-sub-sub-menu">
+                          <li><a href="#1">Microsoft Surface</a></li>
+                          <li><a href="#2">PCs &amp; tablets</a></li>
+                          <li><a href="#3">Xbox</a></li>
+                          <li><a href="#4">Virtual reality</a></li>
+                          <li><a href="#5">Accessories</a></li>
+                          <li><a href="#6">Windows phone</a></li>
+                          <li><a href="#7">Microsoft Band</a></li>
+                      </ul>
+                    </li>
+                    <li class="software">
+                      <a href="#software">Software</a><i class="corner-2"></i>
+                      <ul class="small-sub-sub-menu">
+                          <li><a href="#1">Office</a></li>
+                          <li><a href="#2">Windows</a></li>
+                          <li><a href="#3">Additional software</a></li>
+                      </ul>
+                    </li>
+                    <li class="apps">
+                      <a href="#apps">Apps</a><i class="corner-3"></i>
+                      <ul class="small-sub-sub-menu">
+                          <li><a href="#1">All apps</a></li>
+                          <li><a href="#2">Windows apps</a></li>
+                          <li><a href="#3">Windows phone apps</a></li>                      
+                      </ul>
+                    </li>
+                    <li class="games">
+                      <a href="#games">Games</a><i class="corner-4"></i>
+                      <ul class="small-sub-sub-menu">
+                          <li><a href="#1">Xbox One games</a></li>
+                          <li><a href="#2">Xbox 360 games</a></li>
+                          <li><a href="#3">PC games</a></li>
+                          <li><a href="#4">Windows games</a></li>
+                          <li><a href="#5">Windows phone games</a></li>
+                      </ul>
+                    </li>
+                    <li class="entertainment">
+                      <a href="#entertainment">Entertainment</a><i class="corner-5"></i>
+                      <ul class="small-sub-sub-menu">
+                          <li><a href="#1">All Entertainment</a></li>
+                          <li><a href="#2">Movies &amp; TV</a></li>
+                          <li><a href="#3">Music</a></li>
+                      </ul>
+                    </li>
+                    <li class="business">
+                      <a href="#business">Business &amp; Education</a><i class="corner-6"></i>
+                      <ul class="small-sub-sub-menu">
+                          <li><a href="#1">Bussinese Store</a></li>
+                          <li><a href="#2">Education Store</a></li>
+                          <li><a href="#3">Developer</a></li>
+                      </ul>
+                    </li>
+                    <li class="sale">
+                      <a href="#sale">Sale</a><i class="corner-7"></i>
+                      <ul class="small-sub-sub-menu">
+                          <li><a href="#1">Back-to-school essentials</a></li>
+                          <li><a href="#2">Sale</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#find">Find a store</a></li>
+                    <li><a href="#gift">Gift cards</a></li>
+                </ul>
+              </li>
+              <li class="products">
+                  <a href="#products">Products&nbsp;<span class="prod"></span></a>
+                  <ul class="small-sub-menu">
+                      <li class="services">
+                        <a href="#services">Software &amp; services</a><i class="corner-8"></i>
+                        <ul class="small-sub-sub-menu">
+                            <li><a href="#1">Windows</a></li>
+                            <li><a href="#2">Office</a></li>
+                            <li><a href="#3">Free downloads &amp; security</a></li>
+                            <li><a href="#4">Internet Explorer</a></li>
+                            <li><a href="#5">Microsoft Edge</a></li>
+                            <li><a href="#6">Skype</a></li>
+                            <li><a href="#7">OneNote</a></li>
+                            <li><a href="#8">OneDrive</a></li>
+                            <li><a href="#9">Microft Health</a></li>
+                            <li><a href="#10">MSN</a></li>
+                            <li><a href="#11">Bing</a></li>
+                            <li><a href="#12">Microft Groove</a></li>
+                            <li><a href="#13">Microsoft Films &amp; TV</a></li>
+                        </ul>
+                      </li>
+                      <li class="xbox">
+                        <a href="#xbox">Devices &amp; Xbox</a><i class="corner-9"></i>
+                        <ul class="small-sub-sub-menu">
+                            <li><a href="#1">All Microsoft devices</a></li>
+                            <li><a href="#2">Microsoft Surface</a></li>
+                            <li><a href="#3">All Windows PCs &amp; tablets</a></li>
+                            <li><a href="#4">PC Accessories</a></li>
+                            <li><a href="#5">Xbox &amp; games</a></li>
+                            <li><a href="#6">Microsoft Band</a></li>
+                            <li><a href="#7">Micrsoft Lumia</a></li>
+                        </ul>
+                      </li>
+                      <li class="for-business">
+                        <a href="#for-business">For business</a><i class="corner-10"></i>
+                        <ul class="small-sub-sub-menu">
+                            <li><a href="#1">Cloud platform</a></li>
+                            <li><a href="#2">Microsoft Azure</a></li>
+                            <li><a href="#3">Microsoft Dynamics</a></li>
+                            <li><a href="#4">Windows for business</a></li>
+                            <li><a href="#5">Office for business</a></li>
+                            <li><a href="#6">Skype for business</a></li>
+                            <li><a href="#7">Surface for business</a></li>
+                            <li><a href="#8">Enterprise solutions</a></li>
+                            <li><a href="#9">Small business solutions</a></li>
+                            <li><a href="#10">Find a solutions provider</a></li>
+                            <li><a href="#11">Volume Licensing</a></li>
+                        </ul>
+                      </li>
+                      <li class="for-developers">
+                        <a href="#for-developers">For developers &amp; IT pros</a><i class="corner-11"></i>
+                        <ul class="small-sub-sub-menu">
+                            <li><a href="#1">Develop Windows apps</a></li>
+                            <li><a href="#2">Microsoft Azure</a></li>
+                            <li><a href="#3">MSDN</a></li>
+                            <li><a href="#4">Technet</a></li>
+                            <li><a href="#5">Visual Studio</a></li>
+                        </ul>
+                      </li>
+                      <li class="for-students">
+                        <a href="#for-students">For students &amp; educators</a><i class="corner-12"></i>
+                        <ul class="small-sub-sub-menu">
+                            <li><a href="#1">Shop PCs &amp; tablets perfect for students</a></li>
+                            <li><a href="#2">Microft in Education</a></li>
+                        </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li><a href="#support">Support</a></li>
+          </ul>
+        </div>
+        <div class="login">Sign in</div>
+      </div>
+    </div>
+
+  </nav>
+
+  <section class="search-wrapper">
+    <div class="input-wrapper">
+      <input type="text" placeholder="Search Microsoft.com">
+      <div class="loupe"></div>
+    </div>
+  </section>
+
+  <!-- End MICROSOFT Nav -->
+
+  <!-- Start Dropbox hero -->
+
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="info">
+            <h1>Collaborate faster and more securely</h1>
+            <h2>Boost business productivity with the ultimate file saving and sharing tool that employees love and IT admins trust.</h2>
+            <div class="button-wrapper">
+              <button>Try free for 30 days</button>
+              <div class="link">
+                or <a href="#link">purchase now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End Dropbox hero -->
+
+  <!-- Start Invision signup -->
+
+  <section class="signup">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Join over 2 million designers already using InVision. Get InVision <span>free</span> forever!</h3>
+          <form>
+            <div class="name">
+              <input type="text" placeholder="Your Name">
+            </div>
+            <div class="email">
+              <input type="email" placeholder="Email Address">
+            </div>
+            <div class="pass">
+              <input type="password" placeholder="Create a Password">
+            </div>
+            <div class="button-wrapper">
+              <input type="submit" value="Get started &mdash; free forever!">
+            </div>           
+          </form>
+          <p>
+            By clicking "Get Started — Free Forever!" I agree to InVision's <a href="#terms">Terms of Service</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End Invision signup -->
+
+  <!-- Start Oculus specials offers -->
+
+  <section class="special-offers">
+    <div class="item">
+      <div class="item-image"></div>
+      <div class="content">
+        <p>Featured content</p>
+        <h5>EVE: Valkyrie</h5>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-image"></div>
+      <div class="content">
+        <p>Included with all rift purchases</p>
+        <h5>Lucky's Tale</h5>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-image"></div>
+      <div class="content">
+        <p>Featured story</p>
+        <h5>Over 30 full games launching with oculus touch this year</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- End Oculus specials offers -->
+
+  <!-- Start Apple footer -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-nav">
+            <div class="column">
+              <ul>
+                Shop and Learn
+                <li><a href="#mac">Mac</a></li>
+                <li><a href="#ipad">iPad</a></li>
+                <li><a href="#iphone">iPhone</a></li>
+                <li><a href="#watch">Watch</a></li>
+                <li><a href="#tv">TV</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#itunes">iTunes</a></li>
+                <li><a href="#ipod">iPod</a></li>
+                <li><a href="#accessories">Accessories</a></li>
+                <li><a href="#cards">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul>
+                Apple Store
+                <li><a href="#find">Find a store</a></li>
+                <li><a href="#genius">Genius Bar</a></li>
+                <li><a href="#workshops">Workshops and Learning</a></li>
+                <li><a href="#programs">Youth Programs</a></li>
+                <li><a href="#apple-store">Apple Store App</a></li>
+                <li><a href="#refurbished">Refurbished</a></li>
+                <li><a href="#financing">Financing</a></li>
+                <li><a href="#randr">Reuse and Recycling</a></li>
+                <li><a href="#order">Order Status</a></li>
+                <li><a href="#help">Shopping Help</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul>
+                For Education
+                <li><a href="#ieducation">Apple and Education</a></li>
+                <li><a href="#icollege">Shop for College</a></li>
+              </ul>
+              <ul>
+                For Business
+                <li><a href="#ibusiness">Apple and Business</a></li>
+                <li><a href="#forbusiness">Shop for Business</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul>
+                Account
+                <li><a href="#appleid">Manage Your Apple ID</a></li>
+                <li><a href="#account">Apple Store Account</a></li>
+                <li><a href="#icloud">iCloud.com</a></li>
+              </ul>
+              <ul>
+                Apple Values
+                <li><a href="#ienvironment">Environment</a></li>
+                <li><a href="#responsibility">Supplier Responsibility</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#inclusion">Inclusion and Deversity</a></li>
+                <li><a href="#edu">Education</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul>
+                About Apple
+                <li><a href="#info">Apple Info</a></li>
+                <li><a href="#news">Newsroom</a></li>
+                <li><a href="#job">Job Opportunities</a></li>
+                <li><a href="#investors">Investors</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contacts">Contact Apple</a></li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            More ways to shop: Visit an <a href="#applestore">Apple Store</a>, call 1-800-MY-APPLE, or <a href="#resseler">find a reseller</a>.
+          </p>
+          <div class="hr"></div>
+          <div class="panel">
+            <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+            <ul>
+              <li><a href="#privacy">Privacy Policy</a></li>&#448;
+              <li><a href="#terms">Terms of Use</a></li>&#448;
+              <li><a href="#sales">Sales and Refunds</a></li>&#448;
+              <li><a href="#legal">Legal</a></li>&#448;
+              <li><a href="#map">Site Map</a></li>
+            </ul>
+            <div class="language">
+              <div class="flag"></div>
+              <a href="#usa">United States</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="small-screen-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-ac-nav">
+            <div>
+              <input id="first" type="checkbox" />
+              <label for="first">Shop and Learn</label>
+              <ul  class="ac-opened">                
+                <li><a href="#mac">Mac</a></li>
+                <li><a href="#ipad">iPad</a></li>
+                <li><a href="#iphone">iPhone</a></li>
+                <li><a href="#watch">Watch</a></li>
+                <li><a href="#tv">TV</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#itunes">iTunes</a></li>
+                <li><a href="#ipod">iPod</a></li>
+                <li><a href="#accessories">Accessories</a></li>
+                <li><a href="#cards">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div>
+              <input id="sacond" type="checkbox" />
+              <label for="sacond">Apple Store</label>
+              <ul  class="ac-opened">                
+                <li><a href="#find">Find a store</a></li>
+                <li><a href="#genius">Genius Bar</a></li>
+                <li><a href="#workshops">Workshops and Learning</a></li>
+                <li><a href="#programs">Youth Programs</a></li>
+                <li><a href="#apple-store">Apple Store App</a></li>
+                <li><a href="#refurbished">Refurbished</a></li>
+                <li><a href="#financing">Financing</a></li>
+                <li><a href="#randr">Reuse and Recycling</a></li>
+                <li><a href="#order">Order Status</a></li>
+                <li><a href="#help">Shopping Help</a></li>
+              </ul>
+            </div>
+            <div>
+              <input id="third" type="checkbox" />
+              <label for="third">For Education</label>
+              <ul class="ac-opened">                
+                <li><a href="#ieducation">Apple and Education</a></li>
+                <li><a href="#icollege">Shop for College</a></li>
+              </ul>
+            </div>
+            <div>
+              <input id="fourth" type="checkbox" />
+              <label for="fourth">For Business</label>
+              <ul class="ac-opened">                
+                <li><a href="#ibusiness">Apple and Business</a></li>
+                <li><a href="#forbusiness">Shop for Business</a></li>
+              </ul>
+            </div>
+            <div>
+              <input id="fifth" type="checkbox" />
+              <label for="fifth">Account</label>
+              <ul class="ac-opened">                
+                <li><a href="#appleid">Manage Your Apple ID</a></li>
+                <li><a href="#account">Apple Store Account</a></li>
+                <li><a href="#icloud">iCloud.com</a></li>
+              </ul>
+            </div>
+            <div>
+              <input id="sixth" type="checkbox" />
+              <label for="sixth">Apple Values</label>
+              <ul class="ac-opened">                
+                <li><a href="#ienvironment">Environment</a></li>
+                <li><a href="#responsibility">Supplier Responsibility</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#inclusion">Inclusion and Deversity</a></li>
+                <li><a href="#edu">Education</a></li>
+              </ul>
+            </div>
+            <div>
+              <input id="seventh" name="accordion-7" type="checkbox" />
+              <label for="seventh">About Apple</label>
+              <ul class="ac-opened">                
+                <li><a href="#info">Apple Info</a></li>
+                <li><a href="#news">Newsroom</a></li>
+                <li><a href="#job">Job Opportunities</a></li>
+                <li><a href="#investors">Investors</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contacts">Contact Apple</a></li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            More ways to shop: Visit an <a href="#applestore">Apple Store</a>, call 1-800-MY-APPLE, or <a href="#resseler">find a reseller</a>.
+          </p>
+          <div class="hr"></div>
+          <div class="panel">
+            <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+            <ul>
+              <li><a href="#privacy">Privacy Policy</a></li>&#448;
+              <li><a href="#terms">Terms of Use</a></li>&#448;
+              <li><a href="#sales">Sales and Refunds</a></li>&#448;
+              <li><a href="#legal">Legal</a></li>&#448;
+              <li><a href="#map">Site Map</a></li>
+            </ul>
+            <div class="language">
+              <div class="flag"></div>
+              <a href="#usa">United States</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Apple footer -->
+
+  <!--[if lt IE 9]>
+  <script src="libs/html5shiv/es5-shim.min.js"></script>
+  <script src="libs/html5shiv/html5shiv.min.js"></script>
+  <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+  <script src="libs/respond/respond.min.js"></script>
+  <![endif]-->
+  
+  <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+  <script src="libs/modernizr/modernizr.js"></script>
+  
+  <script src="js/common.js"></script>
+  
+</body>
+</html>
