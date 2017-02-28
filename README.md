@@ -1,5 +1,5 @@
 ## Test-task
-This is a test task for Ciklum JavaScript Internship
+This is test task for Ciklum JavaScript Internship
 
 **Task**:
 #### You need to create a page with the parts (sections of existing web pages):
